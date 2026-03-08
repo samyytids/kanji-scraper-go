@@ -17,6 +17,9 @@ env:
   TF_VAR_app_password: ${{ vars.APP_PASSWORD}}
   TF_VAR_mongo_user_role: ${{ vars.MONGO_USER_ROLE}}
   TF_VAR_mongo_user_db: ${{ vars.MONGO_USER_DB}}
+  TF_VAR_postgres_host: ${{ vars.POSTGRES_HOST}}
+  TF_VAR_postgres_port: ${{ vars.POSTGRES_PORT}}
+  TF_VAR_postgres_db_name: ${{ vars.POSTGRES_DB_NAME}}
 
 jobs:
   terraform:
