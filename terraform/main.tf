@@ -7,8 +7,8 @@ provider "mongodb" {
   ssl           = false
 }
 
-resource "mongodb_user" "user" {
-  auth_dataset = var.mongo_db_name
+resource "mongodb_db_user" "user" {
+  auth_database = var.mongo_db_name
   name          = var.app_username
   password      = var.app_password
   role {
