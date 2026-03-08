@@ -1,0 +1,27 @@
+on:
+  pull_request:
+    branch: main
+
+jobs:
+  terraform:
+    runs-on: self-hosted
+    permissions:
+      contents: read
+      pull-requests: write
+    defaults:
+      run:
+        working-directory: ./terraform
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+      - name: Terraform init
+        run: terraform init
+      - name: Terraform Format Check
+        uses: dflook/terraform-fmt@v2
+      - name: Terraform Validate
+        uses: dflook/terraform-validate@v2
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+      
