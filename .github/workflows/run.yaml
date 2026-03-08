@@ -1,3 +1,5 @@
+name: terraform
+
 on:
   pull_request:
     branches:
