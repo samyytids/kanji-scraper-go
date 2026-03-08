@@ -4,6 +4,8 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - terraform/**
 
 env:
   TF_VAR_mongo_host: ${{ vars.MONGO_HOST}}
