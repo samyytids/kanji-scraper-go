@@ -33,9 +33,9 @@ jobs:
       - name: Terraform init
         run: terraform init
       - name: Terraform Format Check
-        uses: dflook/terraform-fmt@v2
+        run: terraform fmt
       - name: Terraform Validate
-        uses: dflook/terraform-validate@v2
+        run: terraform validate
       - name: Terraform Apply
         run: terraform apply -auto-approve
       
