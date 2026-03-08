@@ -23,6 +23,7 @@ provider "postgresql" {
   database = var.postgres_db_name
   username = var.app_username
   password = var.app_password
+  sslmode = "disable"
 }
 
 resource "postgresql_database" "kanji" {
