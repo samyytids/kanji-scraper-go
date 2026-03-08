@@ -1,6 +1,7 @@
 on:
   pull_request:
-    branch: main
+    branches:
+      - main
 
 env:
   TF_VAR_mongo_host: ${{ vars.MONGO_HOST}}
