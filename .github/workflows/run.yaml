@@ -2,6 +2,17 @@ on:
   pull_request:
     branch: main
 
+env:
+  TF_VAR_mongo_host: ${{ vars.MONGO_HOST}}
+  TF_VAR_mongo_port: ${{ vars.MONGO_PORT}}
+  TF_VAR_mongo_admin_username: ${{ vars.MONGO_ADMIN_USERNAME}}
+  TF_VAR_mongo_admin_password: ${{ vars.MONGO_ADMIN_PASSWORD}}
+  TF_VAR_mongo_db_name: ${{ vars.MONGO_DB_NAME}}
+  TF_VAR_app_username: ${{ vars.APP_USERNAME}}
+  TF_VAR_app_password: ${{ vars.APP_PASSWORD}}
+  TF_VAR_mongo_user_role: ${{ vars.MONGO_USER_ROLE}}
+  TF_VAR_mongo_user_db: ${{ vars.MONGO_USER_DB}}
+
 jobs:
   terraform:
     runs-on: self-hosted
