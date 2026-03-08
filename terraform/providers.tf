@@ -3,6 +3,9 @@ terraform {
     mongodb = {
       source = "Kaginari/mongodb"
     }
+    postgresql = {
+      source  = "cyrilgdn/postgresql"
+    }
   }
 }
 
