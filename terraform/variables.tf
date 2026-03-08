@@ -52,5 +52,22 @@ variable "mongo_user_db" {
   nullable    = false
 }
 
+variable "postgres_host" {
+  type = string
+  description = "The host used for postgres"
+  nullable = false
+}
+
+variable "postgres_port" {
+  type = string
+  description = "The port used for postgres"
+  nullable = false
+}
+
+variable "postgres_db_name" {
+  type = string
+  description = "The db used in postgres"
+  nullable = false
+}
 
 
