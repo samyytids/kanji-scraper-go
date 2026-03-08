@@ -18,15 +18,15 @@ resource "mongodb_db_user" "user" {
 }
 
 provider "postgresql" {
-  host = var.postgres_host
-  port = var.postgres_port
+  host     = var.postgres_host
+  port     = var.postgres_port
   database = var.postgres_db_name
   username = var.app_username
   password = var.app_password
-  sslmode = "disable"
+  sslmode  = "disable"
 }
 
 resource "postgresql_database" "kanji" {
-  provider = "postgresql"
-  name = var.postgres_db_name
+  provider = postgresql
+  name     = var.postgres_db_name
 }
